@@ -1,0 +1,57 @@
+```{=html}
+<div class="front-page">
+  <div id="game-guide" class="game-guide" hidden aria-live="polite">
+    <h3 id="guide-title">The rival always stays safe.</h3>
+    <p id="guide-progress" class="duel-progress">Rule 1 of 3</p>
+    <p id="guide-copy">Your rival is stuck with a fixed rule here. Which row gives you the bigger expected share of the prize?</p>
+  </div>
+  <div class="scoreboard" aria-label="Starting scores in points">
+    <div><span>You<span class="who"> (player A)</span></span><strong id="score-a">105</strong></div>
+    <div><span>Rival<span class="who"> (player B)</span></span><strong id="score-b">100</strong></div>
+    <p id="position">You lead.</p>
+  </div>
+  <div id="duel-game" class="duel" hidden aria-label="Interactive last-round duel">
+    <div class="matrix-scroll" tabindex="0" role="region" aria-label="Payoff matrix; scroll if needed">
+      <div class="matrix" role="group" aria-label="Your expected share of the prize. Choose your row as player A.">
+        <p class="mx-corner">Your share of the prize</p>
+        <p class="mx-col" data-col="0">Rival safe<small data-weight="0"></small></p>
+        <p class="mx-col" data-col="1">Rival risky<small data-weight="1"></small></p>
+        <p class="mx-col mx-net">Against this rival</p>
+        <button type="button" class="mx-row" data-action="0" aria-pressed="false">Safe <small>add 0 points</small></button>
+        <p class="mx-cell" data-cell="0-0">?</p>
+        <p class="mx-cell" data-cell="0-1">?</p>
+        <p class="mx-cell mx-net" data-net="0">?</p>
+        <button type="button" class="mx-row" data-action="1" aria-pressed="false">Risky <small>+10 or −10, a coin flip</small></button>
+        <p class="mx-cell" data-cell="1-0">?</p>
+        <p class="mx-cell" data-cell="1-1">?</p>
+        <p class="mx-cell mx-net" data-net="1">?</p>
+      </div>
+    </div>
+    <p class="game-instruction">Press a row to play one round. The higher final score wins; a tie splits the prize.</p>
+  </div>
+  <div id="duel-play" class="duel-play" hidden>
+    <div class="dispatch">
+      <p id="sample" class="sample" role="status" aria-live="polite"></p>
+      <p id="exact-choice" class="exact-choice" aria-live="polite"></p>
+      <p id="best-response" class="response-note" aria-live="polite"></p>
+    </div>
+    <div class="guide-navigation">
+      <button id="guide-next" type="button">Next: rival always risky</button>
+      <button id="guide-skip" class="text-button" type="button">Skip to free play</button>
+    </div>
+    <div id="free-controls" class="game-controls" hidden>
+      <div><label for="gap">Your starting lead <output id="gap-value" for="gap">+5 points</output></label><input id="gap" type="range" min="-25" max="25" step="1" value="5"></div>
+      <div><label for="rho">Correlation of the coin flips <i class="sym">ρ</i> <output id="rho-value" for="rho">1.0</output></label><input id="rho" type="range" min="-1" max="1" step="0.1" value="1"></div>
+      <div><label for="opponent">Your rival’s rule</label><select id="opponent"><option value="safe">Always safe (fixed rule)</option><option value="risky">Always risky (fixed rule)</option><option value="equilibrium">Equilibrium mixture</option></select></div>
+    </div>
+    <button id="guide-restart" class="text-button" type="button" hidden>Start the guided rules again</button>
+    <p id="opponent-note" class="game-note"></p>
+    <div id="mixed-solution" hidden><p id="equilibrium-text"></p><p id="degenerate-note" class="game-note"></p></div>
+  </div>
+  <div id="reader-invitation" class="duel-rules">
+    <p>Let’s put you in the lead for a moment. You’re player A, there’s one decision left, and staying safe sounds reasonable enough. Your rival, however, gets the same choice. You both decide at the same time, so there’s no waiting to see what they do first. Pick safe or risky, then change the rival’s rule and try again. You might find that protecting a lead has quite a bit to do with the person behind you.</p>
+    <p>Here are the rules. Playing safe adds nothing. Playing risky adds either +10 or −10 on a coin flip. To begin with, if you both go risky, you get the <em>same</em> coin flip. Whoever finishes higher takes the prize, and a tie splits it. Nothing else counts: finishing on 115 instead of 106 gets you nothing extra.</p>
+  </div>
+  <noscript><p class="draft-note">The playable table needs JavaScript. The exact table and explanation below work without it.</p></noscript>
+</div>
+```

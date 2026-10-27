@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          "assets/report.css"
+        ],
+        "createdAt": "2026-10-27T05:26:50.651Z",
+        "reason": "assistant judgment: the one-sided borders in report.css are 5px double print rules (the 'Against this rival' column rule and the random-play dispatch rule), newspaper column rules rather than card accents; the earlier plate/flood rule was removed when the band went full width; author did not weigh in"
+      }
+    ]
+  }
+}

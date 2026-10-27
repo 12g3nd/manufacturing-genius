@@ -1,0 +1,25 @@
+/* Penny-press broadside: newsprint, one relief ink, and one alarm red kept for the reader's own choice and the engraving flood. */
+:root {
+  --mg-paper: #dccfb1;
+  --mg-paper-deep: #cfc09d;
+  --mg-ink: #1c1712;
+  --mg-wash: #4f4335;
+  --mg-red: #9c2414;
+  --font-wood: "Ultra", "Rockwell Extra Bold", serif;
+  --font-head: "League Gothic", "Arial Narrow", sans-serif;
+  --font-text: "Old Standard", Georgia, serif;
+  --font-code: ui-monospace, "Cascadia Mono", Consolas, monospace;
+  --space-xs: .5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.25rem;
+  --space-xl: 3.25rem;
+  --space-section: 4.5rem;
+  --text-label: .9rem;
+  --text-small: 1rem;
+  --text-body: 1.18rem;
+  --rule-heavy: 5px;
+  --shadow-press: 8px 8px 0 var(--mg-ink);
+  --shadow-press-small: 5px 5px 0 var(--mg-ink);
+  --shadow-pressed: 2px 2px 0 var(--mg-ink);
+}

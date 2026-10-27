@@ -1,0 +1,43 @@
+project:
+  type: default
+  output-dir: _output
+  execute-dir: project
+  render:
+    - index.qmd
+
+format:
+  html:
+    theme: default
+    css: assets/report.css
+    toc: true
+    toc-depth: 3
+    toc-expand: 3
+    toc-title: In this sheet
+    code-fold: true
+    code-summary: Show the calculation
+    code-tools: false
+    embed-resources: true
+    html-math-method: mathml
+    title-block-style: none
+    include-before-body:
+      - assets/visual-contract.html
+      - assets/masthead.html
+    include-after-body:
+      - assets/scripts.html
+      - assets/colophon.html
+    smooth-scroll: false
+    grid:
+      body-width: 820px
+      margin-width: 230px
+    lang: en
+
+execute:
+  echo: false
+  warning: false
+  error: false
+  freeze: false
+  daemon: false
+
+bibliography: references.bib
+filters:
+  - assets/math-wrap.lua

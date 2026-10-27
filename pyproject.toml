@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "manufacturing-genius"
+version = "0.1.0"
+description = "A Quarto study of strategic risk and what a leaderboard reveals about ability."
+requires-python = ">=3.11"
+license = "MIT"
+authors = [{ name = "Srihith Jarabana" }]
+dependencies = []
+
+[project.optional-dependencies]
+report = ["jupyter", "matplotlib", "numpy"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

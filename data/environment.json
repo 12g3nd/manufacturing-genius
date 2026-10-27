@@ -1,0 +1,41 @@
+{
+  "python": "3.13.13",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "quarto": "1.9.38",
+  "node": "v24.15.0",
+  "numpy": "2.5.4",
+  "matplotlib": "3.11.2",
+  "jupyter": "1.1.1",
+  "ipykernel": "7.4.0",
+  "pip": "26.0.1",
+  "browser_validation": {
+    "playwright": "1.62.1",
+    "edge": "156.0.4314.42",
+    "headless": true
+  },
+  "fonts": {
+    "Ultra": {
+      "license": "Apache License 2.0",
+      "source": "https://github.com/google/fonts/tree/main/apache/ultra",
+      "files": {
+        "assets/fonts/Ultra.ttf": "9ee63cffbc379e5d4eb5fed6a0b94b770da919497e5cba4a227a6393dae0939e"
+      }
+    },
+    "League Gothic": {
+      "license": "SIL Open Font License 1.1",
+      "source": "https://github.com/google/fonts/tree/main/ofl/leaguegothic",
+      "files": {
+        "assets/fonts/LeagueGothic.ttf": "3b0e998c9a0034222394ffecdd383e6948259ad037b95555b139a217629ce1d0"
+      }
+    },
+    "Old Standard TT": {
+      "license": "SIL Open Font License 1.1",
+      "source": "https://github.com/google/fonts/tree/main/ofl/oldstandardtt",
+      "files": {
+        "assets/fonts/OldStandard-Regular.ttf": "42717a1280b523a506ca2b0285cca380e77fe214b1f6e3d75a8b925005f19eac",
+        "assets/fonts/OldStandard-Bold.ttf": "7d831e9d799ad23ee98e889381a9db2a283b2dac7f228dd5c06071decb9c54db",
+        "assets/fonts/OldStandard-Italic.ttf": "4b9522f4711317fc06e2413a58b4662c249cb707df193d682b9d640e365ef564"
+      }
+    }
+  }
+}

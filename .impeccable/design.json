@@ -1,0 +1,407 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-27T06:25:59Z",
+  "title": "Design System: Manufacturing Genius",
+  "extensions": {
+    "colorMeta": {
+      "alarm-red": {
+        "role": "primary",
+        "displayName": "Alarm Red",
+        "canonical": "#9c2414",
+        "source": "--mg-red in tokens.css",
+        "tonalRamp": [
+          "#360d08",
+          "#62180e",
+          "#932415",
+          "#c9311d",
+          "#e4523f",
+          "#eb8375",
+          "#f3b3aa",
+          "#fadfdb"
+        ]
+      },
+      "relief-ink": {
+        "role": "neutral",
+        "displayName": "Relief Ink",
+        "canonical": "#1c1712",
+        "source": "--mg-ink in tokens.css",
+        "tonalRamp": [
+          "#251f18",
+          "#44382c",
+          "#665442",
+          "#8c735a",
+          "#a9917a",
+          "#c1b09f",
+          "#d9cfc4",
+          "#efebe6"
+        ]
+      },
+      "newsprint": {
+        "role": "neutral",
+        "displayName": "Newsprint",
+        "canonical": "#dccfb1",
+        "source": "--mg-paper in tokens.css",
+        "tonalRamp": [
+          "#2a2313",
+          "#4d4123",
+          "#746134",
+          "#9e8447",
+          "#bba268",
+          "#cebc92",
+          "#e1d6bc",
+          "#f2eee3"
+        ]
+      },
+      "newsprint-deep": {
+        "role": "neutral",
+        "displayName": "Newsprint Deep",
+        "canonical": "#cfc09d",
+        "source": "--mg-paper-deep in tokens.css",
+        "tonalRamp": [
+          "#292314",
+          "#4b4025",
+          "#716037",
+          "#9a824b",
+          "#b7a06c",
+          "#cbbb95",
+          "#dfd5be",
+          "#f2ede4"
+        ]
+      },
+      "press-wash": {
+        "role": "neutral",
+        "displayName": "Press Wash",
+        "canonical": "#4f4335",
+        "source": "--mg-wash in tokens.css",
+        "tonalRamp": [
+          "#251f19",
+          "#43392d",
+          "#655544",
+          "#89745c",
+          "#a7937c",
+          "#c0b1a0",
+          "#d8cfc5",
+          "#efebe7"
+        ]
+      },
+      "figure-wash": {
+        "role": "neutral",
+        "displayName": "Figure Wash",
+        "canonical": "#6e604d",
+        "source": "WASH in scripts/make_figures.py",
+        "tonalRamp": [
+          "#241f19",
+          "#423a2e",
+          "#635645",
+          "#87765e",
+          "#a5947e",
+          "#beb2a2",
+          "#d7d0c6",
+          "#eeebe7"
+        ]
+      },
+      "figure-rule": {
+        "role": "neutral",
+        "displayName": "Figure Rule",
+        "canonical": "#b9a98a",
+        "source": "RULE in scripts/make_figures.py",
+        "tonalRamp": [
+          "#2a2416",
+          "#4b4129",
+          "#6f603e",
+          "#958056",
+          "#b9a98a",
+          "#cabea6",
+          "#ddd5c5",
+          "#f0ece4"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Masthead title only: Ultra sized to the column with container units, wear-masked."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section heads (h2) under a heavy-over-hairline rule pair; matrix row labels use the same face at clamp(2rem, 6cqw, 2.4rem)."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Subsection heads (h3) under a 1.5px rule."
+      },
+      "numeral": {
+        "displayName": "Numeral",
+        "purpose": "Payoff matrix cells, tabular figures."
+      },
+      "score": {
+        "displayName": "Score",
+        "purpose": "The two scoreboard scores, wear-masked Ultra."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Reading text, 36em measure, 1.1rem under 600px."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Buttons, disclosure summaries, control labels, table heads, folio, contents rail; uppercase."
+      },
+      "note": {
+        "displayName": "Note",
+        "purpose": "Italic captions, measurements, game notes, guide copy."
+      }
+    },
+    "shadows": [
+      {
+        "name": "front-page-offset",
+        "value": "12px 12px 0 #1c1712",
+        "purpose": "The duel's front-page box only; becomes the press shadow under 600px."
+      },
+      {
+        "name": "press",
+        "value": "8px 8px 0 var(--mg-ink)",
+        "purpose": "The masthead engraving band (--shadow-press)."
+      },
+      {
+        "name": "press-small",
+        "value": "5px 5px 0 var(--mg-ink)",
+        "purpose": "Inked controls at rest (--shadow-press-small)."
+      },
+      {
+        "name": "pressed",
+        "value": "2px 2px 0 var(--mg-ink)",
+        "purpose": "Active inked controls and the pressed matrix row, paired with translate(3px, 3px) (--shadow-pressed)."
+      }
+    ],
+    "motion": [
+      {
+        "name": "press",
+        "value": "0.12s cubic-bezier(.2, .8, .2, 1)",
+        "purpose": "Transform, shadow and background transitions on inked controls; off under prefers-reduced-motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "contents-inline",
+        "value": "991px",
+        "note": "In-page contents list replaces the rail at and below this width."
+      },
+      {
+        "name": "panels-stack",
+        "value": "900px",
+        "note": "Two-up evidence panels stack."
+      },
+      {
+        "name": "single-column",
+        "value": "760px",
+        "note": "Front page, opening columns and control grids go single-column."
+      },
+      {
+        "name": "phone",
+        "value": "600px",
+        "note": "Tighter padding, smaller body, smaller front-page shadow."
+      },
+      {
+        "name": "matrix-compact",
+        "value": "34rem (container query)",
+        "note": "Matrix tightens gaps and numerals."
+      }
+    ],
+    "rasters": [
+      {
+        "path": "assets/broadside/spurt-for-the-lead.jpg",
+        "source": "Frank Leslie's Illustrated Newspaper, 4 October 1879, via the Library of Congress",
+        "licence": "public domain",
+        "treatment": "black relief line multiplied over flat alarm red; provenance embedded"
+      },
+      {
+        "path": "assets/broadside/newsprint.jpg",
+        "source": "photograph by Pink Sherbet Photography",
+        "licence": "CC BY 2.0",
+        "treatment": "cropped, flattened and tiled at 720px; attribution in the colophon and docs/SOURCES.md; provenance embedded"
+      },
+      {
+        "path": "assets/broadside/wood-wear.png",
+        "source": "procedural",
+        "licence": "project",
+        "treatment": "wear mask on Ultra (340px masthead, 260px scores); provenance embedded"
+      }
+    ],
+    "fonts": [
+      {
+        "family": "Ultra",
+        "licence": "Apache 2.0",
+        "file": "assets/fonts/Ultra.ttf"
+      },
+      {
+        "family": "League Gothic",
+        "licence": "OFL",
+        "file": "assets/fonts/LeagueGothic.ttf"
+      },
+      {
+        "family": "Old Standard TT",
+        "licence": "OFL",
+        "file": "assets/fonts/OldStandard-*.ttf",
+        "note": "declared as \"Old Standard\"; U+2212 excluded via unicode-range"
+      }
+    ],
+    "figureSeries": [
+      {
+        "series": "equilibrium",
+        "color": "relief-ink",
+        "marker": "filled circle",
+        "line": "solid, 2.2"
+      },
+      {
+        "series": "both-safe",
+        "color": "relief-ink",
+        "marker": "open square (paper fill)",
+        "line": "dashed, 1.3"
+      },
+      {
+        "series": "both-risky",
+        "color": "figure-wash",
+        "marker": "filled triangle",
+        "line": "dotted, 1.6"
+      }
+    ],
+    "detectorSuppressions": [
+      {
+        "rule": "side-tab",
+        "scope": "assets/report.css",
+        "status": "accepted"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Inked Button",
+      "kind": "button",
+      "refersTo": "button-inked",
+      "description": "Primary pressable control: paper face, 3px ink border, hard offset that collapses on press.",
+      "html": "<button class=\"ds-btn\" type=\"button\">Next: rival always risky</button>",
+      "css": ":host{--mg-paper:#dccfb1;--mg-paper-deep:#cfc09d;--mg-ink:#1c1712;--mg-wash:#4f4335;--mg-red:#9c2414;--font-wood:\"Ultra\",\"Rockwell Extra Bold\",serif;--font-head:\"League Gothic\",\"Arial Narrow\",sans-serif;--font-text:\"Old Standard\",Georgia,serif;}.ds-btn{display:inline-flex;align-items:center;min-height:52px;padding:.45rem .9rem;border:3px solid var(--mg-ink);border-radius:0;background:var(--mg-paper);color:var(--mg-ink);box-shadow:5px 5px 0 var(--mg-ink);font-family:var(--font-head);font-size:1.45rem;line-height:1.05;letter-spacing:.03em;text-transform:uppercase;cursor:pointer;transition:transform .12s cubic-bezier(.2,.8,.2,1),box-shadow .12s cubic-bezier(.2,.8,.2,1),background-color .12s;}.ds-btn:hover{background:var(--mg-ink);color:var(--mg-paper);}.ds-btn:active{transform:translate(3px,3px);box-shadow:2px 2px 0 var(--mg-ink);}.ds-btn:focus-visible{outline:3px solid var(--mg-red);outline-offset:3px;}"
+    },
+    {
+      "name": "Secondary Text Button",
+      "kind": "button",
+      "refersTo": "button-inked",
+      "description": "Skip and restart actions: same face and type, 1.5px border, no shadow.",
+      "html": "<button class=\"ds-btn ds-btn-text\" type=\"button\">Skip to free play</button>",
+      "css": ":host{--mg-paper:#dccfb1;--mg-paper-deep:#cfc09d;--mg-ink:#1c1712;--mg-wash:#4f4335;--mg-red:#9c2414;--font-wood:\"Ultra\",\"Rockwell Extra Bold\",serif;--font-head:\"League Gothic\",\"Arial Narrow\",sans-serif;--font-text:\"Old Standard\",Georgia,serif;}.ds-btn{display:inline-flex;align-items:center;min-height:52px;padding:.45rem .9rem;border:3px solid var(--mg-ink);border-radius:0;background:var(--mg-paper);color:var(--mg-ink);box-shadow:5px 5px 0 var(--mg-ink);font-family:var(--font-head);font-size:1.45rem;line-height:1.05;letter-spacing:.03em;text-transform:uppercase;cursor:pointer;transition:transform .12s cubic-bezier(.2,.8,.2,1),box-shadow .12s cubic-bezier(.2,.8,.2,1),background-color .12s;}.ds-btn:hover{background:var(--mg-ink);color:var(--mg-paper);}.ds-btn:active{transform:translate(3px,3px);box-shadow:2px 2px 0 var(--mg-ink);}.ds-btn:focus-visible{outline:3px solid var(--mg-red);outline-offset:3px;}.ds-btn-text{border-width:1.5px;box-shadow:none;}"
+    },
+    {
+      "name": "Matrix Row",
+      "kind": "custom",
+      "refersTo": "matrix-row",
+      "description": "Payoff matrix row button; the pressed row fills alarm red and stays seated.",
+      "html": "<div class=\"ds-rows\"><button class=\"ds-row\" type=\"button\" aria-pressed=\"true\">Safe <small>add 0 points</small></button><button class=\"ds-row\" type=\"button\" aria-pressed=\"false\">Risky <small>+10 or −10, a coin flip</small></button></div>",
+      "css": ":host{--mg-paper:#dccfb1;--mg-paper-deep:#cfc09d;--mg-ink:#1c1712;--mg-wash:#4f4335;--mg-red:#9c2414;--font-wood:\"Ultra\",\"Rockwell Extra Bold\",serif;--font-head:\"League Gothic\",\"Arial Narrow\",sans-serif;--font-text:\"Old Standard\",Georgia,serif;}.ds-rows{display:grid;gap:10px;max-width:14rem;}.ds-row{display:flex;flex-direction:column;align-items:flex-start;min-height:4.1rem;padding:.3rem .8rem;border:3px solid var(--mg-ink);border-radius:0;background:var(--mg-paper);color:var(--mg-ink);box-shadow:5px 5px 0 var(--mg-ink);font-family:var(--font-head);font-size:2.4rem;line-height:.95;text-transform:uppercase;cursor:pointer;transition:transform .12s cubic-bezier(.2,.8,.2,1),box-shadow .12s cubic-bezier(.2,.8,.2,1),background-color .12s;}.ds-row small{margin-top:.3rem;font-family:var(--font-text);font-size:.85rem;text-transform:none;}.ds-row:hover{background:var(--mg-ink);color:var(--mg-paper);}.ds-row:active{transform:translate(3px,3px);box-shadow:2px 2px 0 var(--mg-ink);}.ds-row[aria-pressed=\"true\"]{background:var(--mg-red);border-color:var(--mg-red);color:var(--mg-paper);transform:translate(3px,3px);box-shadow:2px 2px 0 var(--mg-ink);}.ds-row:focus-visible{outline:3px solid var(--mg-red);outline-offset:3px;}"
+    },
+    {
+      "name": "Matrix Cells",
+      "kind": "custom",
+      "refersTo": "matrix-cell",
+      "description": "Ruled numeral cells: wash when unchosen, full ink and 3px when chosen, ink block when drawn; the net column sits behind a double rule with the better row in red.",
+      "html": "<div class=\"ds-cells\"><p class=\"ds-cell ds-hit\">100%</p><p class=\"ds-cell ds-chosen\">50%</p><p class=\"ds-cell ds-net ds-best\">100%</p><p class=\"ds-cell\">50%</p><p class=\"ds-cell\">100%</p><p class=\"ds-cell ds-net\">50%</p></div>",
+      "css": ":host{--mg-paper:#dccfb1;--mg-paper-deep:#cfc09d;--mg-ink:#1c1712;--mg-wash:#4f4335;--mg-red:#9c2414;--font-wood:\"Ultra\",\"Rockwell Extra Bold\",serif;--font-head:\"League Gothic\",\"Arial Narrow\",sans-serif;--font-text:\"Old Standard\",Georgia,serif;}.ds-cells{display:grid;grid-template-columns:repeat(3,6rem);gap:10px;}.ds-cell{display:flex;align-items:center;justify-content:center;min-height:4.1rem;margin:0;border:1.5px solid var(--mg-ink);font-family:var(--font-head);font-size:2.6rem;line-height:1;font-variant-numeric:tabular-nums;color:var(--mg-wash);}.ds-chosen{border-width:3px;color:var(--mg-ink);}.ds-hit{border-width:3px;background:var(--mg-ink);color:var(--mg-paper);}.ds-net{border-width:0 0 0 5px;border-left-style:double;justify-content:flex-start;padding-left:.8rem;color:var(--mg-ink);}.ds-best{color:var(--mg-red);text-decoration:underline 4px;text-underline-offset:.12em;}"
+    },
+    {
+      "name": "Scoreboard",
+      "kind": "custom",
+      "description": "Worn wood-type scores; only the reader's score is red.",
+      "html": "<div class=\"ds-score\"><div><span>You (player A)</span><strong class=\"ds-you\">105</strong></div><div><span>Rival (player B)</span><strong>100</strong></div><p>You lead.</p></div>",
+      "css": ":host{--mg-paper:#dccfb1;--mg-paper-deep:#cfc09d;--mg-ink:#1c1712;--mg-wash:#4f4335;--mg-red:#9c2414;--font-wood:\"Ultra\",\"Rockwell Extra Bold\",serif;--font-head:\"League Gothic\",\"Arial Narrow\",sans-serif;--font-text:\"Old Standard\",Georgia,serif;}.ds-score{display:grid;grid-template-columns:1fr 1fr;gap:.2rem 1rem;padding:1rem 1.5rem;color:var(--mg-ink);}.ds-score span{display:block;font-family:var(--font-head);font-size:1.15rem;letter-spacing:.06em;text-transform:uppercase;}.ds-score strong{display:block;font-family:var(--font-wood);font-weight:400;font-size:3.2rem;line-height:1;font-variant-numeric:tabular-nums;}.ds-you{color:var(--mg-red);}.ds-score p{grid-column:1/-1;margin:0;font-family:var(--font-text);font-style:italic;}"
+    },
+    {
+      "name": "Disclosure",
+      "kind": "custom",
+      "refersTo": "disclosure-open",
+      "description": "Inked summary with Show/Hide; inverts to ink when open.",
+      "html": "<details class=\"ds-details\"><summary>Complete results, including nulls and controls</summary><p>Ledger contents.</p></details>",
+      "css": ":host{--mg-paper:#dccfb1;--mg-paper-deep:#cfc09d;--mg-ink:#1c1712;--mg-wash:#4f4335;--mg-red:#9c2414;--font-wood:\"Ultra\",\"Rockwell Extra Bold\",serif;--font-head:\"League Gothic\",\"Arial Narrow\",sans-serif;--font-text:\"Old Standard\",Georgia,serif;}.ds-details{padding:0 6px 6px 0;color:var(--mg-ink);font-family:var(--font-text);}.ds-details>summary{display:flex;justify-content:space-between;align-items:center;gap:1rem;min-height:52px;padding:.45rem .9rem;border:3px solid var(--mg-ink);background:var(--mg-paper);box-shadow:5px 5px 0 var(--mg-ink);list-style:none;cursor:pointer;font-family:var(--font-head);font-size:1.4rem;line-height:1.1;letter-spacing:.03em;text-transform:uppercase;transition:transform .12s cubic-bezier(.2,.8,.2,1),box-shadow .12s cubic-bezier(.2,.8,.2,1),background-color .12s;}.ds-details>summary::-webkit-details-marker{display:none;}.ds-details>summary::after{content:\"Show\";font-family:var(--font-text);font-size:.95rem;font-style:italic;text-transform:none;letter-spacing:0;}.ds-details[open]>summary{background:var(--mg-ink);color:var(--mg-paper);}.ds-details[open]>summary::after{content:\"Hide\";}.ds-details>summary:hover{background:var(--mg-ink);color:var(--mg-paper);}.ds-details>summary:active{transform:translate(3px,3px);box-shadow:2px 2px 0 var(--mg-ink);}.ds-details>summary:focus-visible{outline:3px solid var(--mg-red);outline-offset:3px;}"
+    },
+    {
+      "name": "Select",
+      "kind": "input",
+      "refersTo": "select-field",
+      "description": "Square ruled select in the news face under a gothic label.",
+      "html": "<label class=\"ds-label\">Your rival’s rule<select class=\"ds-select\"><option>Always safe (fixed rule)</option><option>Equilibrium mixture</option></select></label>",
+      "css": ":host{--mg-paper:#dccfb1;--mg-paper-deep:#cfc09d;--mg-ink:#1c1712;--mg-wash:#4f4335;--mg-red:#9c2414;--font-wood:\"Ultra\",\"Rockwell Extra Bold\",serif;--font-head:\"League Gothic\",\"Arial Narrow\",sans-serif;--font-text:\"Old Standard\",Georgia,serif;}.ds-label{display:block;font-family:var(--font-head);font-size:1.3rem;letter-spacing:.03em;text-transform:uppercase;color:var(--mg-ink);}.ds-select{display:block;width:100%;min-height:48px;margin-top:.5rem;padding:.55rem .7rem;border:3px solid var(--mg-ink);border-radius:0;background:var(--mg-paper);color:var(--mg-ink);font-family:var(--font-text);font-size:1.05rem;text-transform:none;}.ds-select:focus-visible{outline:3px solid var(--mg-red);outline-offset:3px;}"
+    },
+    {
+      "name": "Contents Rail",
+      "kind": "nav",
+      "description": "The sheet's index: gothic top level, italic subsections, active entry bold and ink-underlined, never red.",
+      "html": "<nav class=\"ds-toc\"><h2>In this sheet</h2><ul><li><a class=\"active\" href=\"#\">The last round</a><ul><li><a href=\"#\">Correlation changes the game</a></li></ul></li><li><a href=\"#\">What does a winner tell us?</a></li></ul></nav>",
+      "css": ":host{--mg-paper:#dccfb1;--mg-paper-deep:#cfc09d;--mg-ink:#1c1712;--mg-wash:#4f4335;--mg-red:#9c2414;--font-wood:\"Ultra\",\"Rockwell Extra Bold\",serif;--font-head:\"League Gothic\",\"Arial Narrow\",sans-serif;--font-text:\"Old Standard\",Georgia,serif;}.ds-toc{font-family:var(--font-text);font-size:.95rem;line-height:1.3;color:var(--mg-ink);}.ds-toc h2{margin:0 0 .6rem;padding-bottom:.25rem;border-bottom:3px solid var(--mg-ink);font-family:var(--font-head);font-size:1.6rem;font-weight:400;letter-spacing:.04em;text-transform:uppercase;}.ds-toc ul{list-style:none;margin:0;padding:0;}.ds-toc ul ul{padding-left:.5rem;}.ds-toc a{display:block;padding-block:.3rem;color:var(--mg-ink);text-decoration:none;}.ds-toc>ul>li>a{font-family:var(--font-head);font-size:1.15rem;letter-spacing:.03em;text-transform:uppercase;line-height:1.1;}.ds-toc ul ul a{font-style:italic;}.ds-toc a.active{font-weight:700;text-decoration:underline 3px;text-underline-offset:.22em;}.ds-toc a:hover{color:var(--mg-red);}.ds-toc a:focus-visible{outline:3px solid var(--mg-red);outline-offset:3px;}"
+    },
+    {
+      "name": "Boxed Evidence",
+      "kind": "card",
+      "description": "Double-ruled box for figures, the static benchmark and references; verdict line in gothic over a hairline.",
+      "html": "<figure class=\"ds-box\"><p class=\"ds-verdict\">Same gamble, opposite answers</p><figcaption>Bars are pointwise 95% Monte Carlo intervals.</figcaption></figure>",
+      "css": ":host{--mg-paper:#dccfb1;--mg-paper-deep:#cfc09d;--mg-ink:#1c1712;--mg-wash:#4f4335;--mg-red:#9c2414;--font-wood:\"Ultra\",\"Rockwell Extra Bold\",serif;--font-head:\"League Gothic\",\"Arial Narrow\",sans-serif;--font-text:\"Old Standard\",Georgia,serif;}.ds-box{margin:0;padding:1.5rem;border:5px double var(--mg-ink);border-radius:0;color:var(--mg-ink);}.ds-verdict{margin:0 0 .5rem;padding-top:1rem;border-top:1.5px solid var(--mg-ink);font-family:var(--font-head);font-size:1.75rem;line-height:1.02;text-transform:uppercase;}.ds-box figcaption{padding-top:1rem;border-top:1.5px solid var(--mg-ink);font-family:var(--font-text);font-size:1rem;font-style:italic;line-height:1.5;}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Day's Broadside",
+    "overview": "The page is a single sheet of nineteenth-century penny press. Mottled newsprint carries one black relief ink, worn wood type for the masthead and the scores, condensed gothic for heads and numerals, and a period news face for the text. The duel is the front-page event: a ruled box under the masthead holding the rule, the scores and a live 2x2 that the reader plays by pressing a row. The study then runs down the sheet in ruled sections and double-ruled evidence boxes, ending at the references and a colophon.\n\nThe sheet is dense and printed, not soft. Structure comes from rules (heavy-over-hairline pairs, double rules, column rules) and from ink: inverted ink blocks for headers, hard offset ink shadows under the things you can press. Colour is almost absent; one alarm red marks what the reader has chosen and floods the engraving. The style must never make the statistics look less serious, so every ornament is a print device that also does a job (separating, grouping, signalling a press).\n\nThis world replaced the earlier warm reading surface (Commissioner and Asap on ivory, clay accent, rounded controls). Nothing from that system carries over.",
+    "keyCharacteristics": [
+      "Mottled newsprint ground, one relief ink, one reserved red.",
+      "Ultra wood type with a wear mask for the masthead and scores; League Gothic uppercase for every head, label and table numeral; Old Standard for reading.",
+      "Thick-thin rule pairs open and close the sheet and every section head.",
+      "Square corners everywhere; depth is a flat ink offset, never a blur.",
+      "Pressable things look inked and physically press into the paper."
+    ],
+    "rules": [
+      {
+        "name": "The Reader's Red Rule",
+        "body": "Red marks the reader's own choice and nothing that the page chose for them: their score, their pressed row, the better row in the payoff column, focus, plus the engraving's colour field. Section heads, figures, the contents rail and the active contents entry stay in ink. If a new element wants red, it must be something the reader did.",
+        "section": "colors"
+      },
+      {
+        "name": "The Ink-Only Figures Rule",
+        "body": "Figure series are told apart by ink value (ink or figure wash), marker fill (solid, open, wash) and line style (heavy solid, dashed, dotted), never by hue. The established mapping: equilibrium is ink, filled circle, heavy solid line (2.2); both-safe is ink, open square, dashed (1.3); both-risky is figure wash, filled triangle, dotted (1.6). Figures render on a transparent ground so the newsprint shows through.",
+        "section": "colors"
+      },
+      {
+        "name": "The Three Faces Rule",
+        "body": "Ultra is for the masthead, the scores and the opening drop cap only; League Gothic for heads, labels and numerals; Old Standard for everything read. Do not set reading text in League Gothic or a head in Old Standard.",
+        "section": "typography"
+      },
+      {
+        "name": "The Honest Minus Rule",
+        "body": "Old Standard draws U+2212 as a long dash, so its font faces exclude that code point through unicode-range and minus signs fall back to the next serif. Keep the exclusion on any new Old Standard face.",
+        "section": "typography"
+      },
+      {
+        "name": "The Press-Not-Lift Rule",
+        "body": "Shadows are flat ink offsets down and to the right, and only on pressable controls, the engraving band and the front-page box. Interaction moves an element into the paper, never up off it. Secondary text buttons (skip, restart) drop the shadow and use a 1.5px border so the primary action stays the one that looks inked.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Rule Weight Rule",
+        "body": "Three weights only: 1.5px hairline, 3px solid, 5px (solid in rule pairs, double around boxes). Grouping is said with a rule, never with a tinted card or a radius.",
+        "section": "shapes"
+      }
+    ],
+    "dos": [
+      "**Do** keep alarm red for what the reader chose (score, pressed row, better row), the focus ring and the engraving's colour field.",
+      "**Do** separate figure series by ink value, marker fill and line style, using the equilibrium / both-safe / both-risky mapping above.",
+      "**Do** group with rules at 1.5px, 3px or 5px (double around boxes) and keep every corner square.",
+      "**Do** give pressable controls a 3px ink border and a hard ink offset that collapses by 3px when pressed.",
+      "**Do** set heads, labels and numerals in League Gothic uppercase, reading text in Old Standard, and reserve Ultra for the masthead, scores and the opening drop cap.",
+      "**Do** keep tabular figures on scores, matrix cells, tables and measurements.",
+      "**Do** carry provenance in any new shipping raster and credit it in the colophon and `docs/SOURCES.md`."
+    ],
+    "donts": [
+      "**Don't** round corners, add blurred or lifted shadows, or use tinted cards to group content.",
+      "**Don't** use red in figures, the contents rail, section heads or any decoration the reader did not trigger.",
+      "**Don't** add grid or graph-paper backgrounds, rubber stamps or stamp-style badges.",
+      "**Don't** add small tracked uppercase labels above headings; heads stand on their rules.",
+      "**Don't** reintroduce the retired warm reading surface (Commissioner, Asap, ivory ground, clay accent, rounded controls).",
+      "**Don't** set Old Standard faces without the U+2212 exclusion."
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "design_version": "1.0",
+  "frozen_on": "2026-10-25",
+  "frozen_before_results": true,
+  "replicates": 10000,
+  "master_seed": 20261025,
+  "generator": "numpy.random.PCG64 via SeedSequence([master_seed, scenario_index, stream_id])",
+  "stream_ids": {"labels": 1, "first_round": 2, "potential_risk": 3, "actions": 4, "ties": 5, "fresh_evaluation": 6},
+  "sigma_0": 1.0,
+  "sigma_H": 1.0,
+  "delta": [0.0, 0.25, 0.75, 1.5],
+  "risk_size": [0.0, 0.5, 1.5, 3.0],
+  "correlation": [0.0, 0.5, 1.0],
+  "scenario_order": "itertools.product(delta, risk_size, correlation), rightmost varies fastest",
+  "policies": ["equilibrium", "safe", "risky"],
+  "paired_comparisons": [["equilibrium", "safe"], ["equilibrium", "risky"]],
+  "figure_plan": ["full_grid_accuracy_and_paired_differences", "full_grid_winner_overstatement", "fresh_evaluation_at_delta_0.75_risk_1.5_all_correlations"],
+  "precision_plan": "Fixed 10000, binary worst-case MC SE at most 0.005; no result-driven increases. Pointwise 95% intervals, not simultaneous tests. Exact accuracy is the independent benchmark."
+}

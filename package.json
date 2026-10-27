@@ -1,0 +1,9 @@
+{
+  "name": "manufacturing-genius-checks",
+  "private": true,
+  "scripts": {
+    "check:math": "node scripts/check_browser_math.cjs",
+    "check:article": "node scripts/check_article.cjs"
+  },
+  "devDependencies": {"playwright": "1.62.1"}
+}
